@@ -1,14 +1,20 @@
 import java.util.Scanner;
 
 public class Dealership {
-
-	
 	
 	public static void runUserSelection(int selection) {
 		switch(selection) {
 		case 1:
 			Customers Customers = new Customers();
 			Customers.viewCars();
+			break;
+		case 2:
+			UserLogin UserLogin = new UserLogin();
+			UserLogin.register();
+			break;
+		case 3:
+			EmployeeLogin EmployeeLogin = new EmployeeLogin();
+			EmployeeLogin.Offers();
 			break;
 		case 5:
 			System.out.println("exiting program");
