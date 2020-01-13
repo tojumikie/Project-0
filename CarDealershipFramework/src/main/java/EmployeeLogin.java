@@ -13,14 +13,16 @@ public class EmployeeLogin {
 	
 	public static void Offers() {
 		Scanner kb = new Scanner(System.in);
+		String offerDecision;
 		
 		System.out.println("offer for " + Customers.offerPrice);
 		System.out.println("Do you want to accept the offer");
-		if (kb.nextLine().equals("yes")) {
+		offerDecision = kb.nextLine();
+		if (offerDecision.equals("yes")) {
 			System.out.println("offer accepted");
 		}
-		else {
-			//System.exit(0);
+		else if (offerDecision.equals("no")) {
+			System.out.println("The offer has not been accepted");
 		}
 	}
 }

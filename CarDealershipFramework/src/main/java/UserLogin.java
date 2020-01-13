@@ -41,7 +41,7 @@ public class UserLogin {
 //			System.out.println("Unable to log in. Username or password "
 //					+ "is incorrect");
 //		}
-		UserMenu();
+		//UserMenu();
 	}
 	public static void UserMenu() {
 		Scanner kb = new Scanner(System.in);
