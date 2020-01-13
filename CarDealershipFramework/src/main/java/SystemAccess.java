@@ -20,6 +20,5 @@ public class SystemAccess {
 		int months = kb.nextInt();
 		int monthlyPayment = price / months;
 		System.out.println("The monthly payment is " + monthlyPayment);
-		
 	}
 }
