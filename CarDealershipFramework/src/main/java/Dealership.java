@@ -10,11 +10,15 @@ public class Dealership {
 			break;
 		case 2:
 			UserLogin UserLogin = new UserLogin();
-			UserLogin.register();
+			//UserLogin.register();
+			UserLogin.UserMenu();
 			break;
 		case 3:
 			EmployeeLogin EmployeeLogin = new EmployeeLogin();
 			EmployeeLogin.Offers();
+			break;
+		case 4:
+			SystemAccess SystemAccess = new SystemAccess();
 			break;
 		case 5:
 			System.out.println("exiting program");

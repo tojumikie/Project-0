@@ -14,6 +14,19 @@ public class UserLogin {
 		//System.out.println(accountArray[0][0]);
 		//System.out.println(accountArray[0][1]);
 	}
+	public void UserMenu() {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Would you like to register or log in?");
+		if(kb.nextLine().equalsIgnoreCase("register"))
+		{
+			register();
+		}
+		else if(kb.nextLine().equalsIgnoreCase("log in"))
+		{
+			login();
+		}
+		
+	}
 	public void register (){
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter the username");
