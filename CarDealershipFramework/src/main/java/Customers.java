@@ -3,18 +3,59 @@ import java.util.Scanner;
 import java.io.Serializable;
 
 public class Customers {
+	public static int offerPrice = 0;
+	public static int paymentLeft = 0;
+	
 	//public static HashMap<String, Integer> carsForSale = new HashMap<String, Integer>();
 	//carsForSale.
 	//carsForSale
 	
+	public static void main(String[] args) {
+		//firstOption();
+	}
 	
+	public static void firstOption() {
+		Scanner kb = new Scanner(System.in);
+		String option;
+		System.out.println("Would you like to make a buy a car or make a payment?");
+		option = kb.nextLine();
+		if(option.equals("buy a car"))
+		{
+			viewCars();
+		}
+		else if(option.equals("make a payment"))
+		{
+			customerPayment();
+		}
+	}
 	
-	public static int offerPrice = 0;
+	public static void customerPayment() {
+		Scanner kb = new Scanner(System.in);
+		String decision;
+		int payment;
+		if (paymentLeft > 0) {
+			System.out.println("Payment of $" +  paymentLeft + " remaining");
+			System.out.println("Do you want to make a payment?");
+			decision = kb.nextLine();
+			if(decision.equals("yes"))
+			{
+				System.out.println("Type the payment amount as an integer");
+				payment = kb.nextInt();
+				paymentLeft = paymentLeft + payment;
+				System.out.println("payment left is $" + paymentLeft);
+			}
+		}
+		else
+		{
+			System.out.println("There is no payment to make.");
+		}
+	}
+	
 	
 	public static void viewCars() {
 		Scanner kb = new Scanner(System.in);
 		EmployeeLogin.insertOriginalCars();
-		System.out.println("SELECT A CAR");
+		System.out.println("SELECT A CAR. TYPE THE NUMBER OF THE CAR");
 		EmployeeLogin.showCars();
 //		System.out.println("CARS AVAILABLE. SELECT A CAR");
 //		System.out.println("1. 2010 Ford Mustang GT, $8500 ");
@@ -30,7 +71,7 @@ public class Customers {
 		Scanner kb = new Scanner(System.in);
 		switch (option) {
 		case 1:
-			System.out.println("2010 Ford Mustang GT, $8500");
+			System.out.println("2009 Jaguar XF Supercharged, $8499");
 			System.out.println("Would you like to make an offer?");
 			if (kb.nextLine().equals("yes")) {
 				System.out.println("Type the offer price as an integer");
@@ -42,7 +83,7 @@ public class Customers {
 			}
 			break;
 		case 2:
-			System.out.println("2009 Jaguar XF Supercharged, $8499");
+			System.out.println("2010 Ford Mustang GT, $8500");
 			System.out.println("Would you like to make an offer?");
 			if (kb.nextLine().equals("yes")) {
 				System.out.println("Type the offer price as an integer");

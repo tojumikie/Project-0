@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class EmployeeLogin {
 	public static HashMap<String, Integer> carsForSale = new HashMap<String, Integer>();
+	
 	//	int price = 0;
 //	price = Customers.offerPrice;
 //	
@@ -24,7 +25,8 @@ public class EmployeeLogin {
 		System.out.println("Do you want to accept the offer");
 		offerDecision = kb.nextLine();
 		if (offerDecision.equals("yes")) {
-			System.out.println("offer accepted");
+			System.out.println("Offer Accepted, vehicle has been sold.");
+			Customers.paymentLeft = Customers.offerPrice;
 		}
 		else if (offerDecision.equals("no")) {
 			System.out.println("The offer has not been accepted");

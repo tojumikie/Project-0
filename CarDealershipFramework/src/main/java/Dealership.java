@@ -6,7 +6,7 @@ public class Dealership {
 		switch(selection) {
 		case 1:
 			Customers Customers = new Customers();
-			Customers.viewCars();
+			Customers.firstOption();
 			break;
 		case 2:
 			UserLogin UserLogin = new UserLogin();
@@ -19,6 +19,7 @@ public class Dealership {
 			break;
 		case 4:
 			SystemAccess SystemAccess = new SystemAccess();
+			SystemAccess.calculateMonthlyPayment();
 			break;
 		case 5:
 			System.out.println("The program has terminated.");
