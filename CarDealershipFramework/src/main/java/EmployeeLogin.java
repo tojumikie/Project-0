@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class EmployeeLogin {
 	public static HashMap<String, Integer> carsForSale = new HashMap<String, Integer>();
 	
+	
 	//	int price = 0;
 //	price = Customers.offerPrice;
 //	
@@ -15,6 +16,21 @@ public class EmployeeLogin {
 		//showCars();
 		//addCars();
 		//showCars();
+	}
+	
+	public static void viewPayments() {
+//		String test = "this is a test";
+//		try {
+//			FileOutputStream fstr = new FileOutputStream("test.txt");
+//			ObjectOutputStream ostr = new ObjectOutputStream(fstr);
+//			ostr.writeObject(test);
+//			ostr.close();
+//			fstr.close();
+//			System.out.println("data saved in test.txt");
+//		}
+//		catch(IOException io) {
+//			io.printStackTrace();
+//		}
 	}
 	
 	public static void Offers() {

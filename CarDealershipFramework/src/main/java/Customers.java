@@ -1,6 +1,9 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.io.Serializable;
+
 
 public class Customers {
 	public static int offerPrice = 0;
@@ -12,7 +15,20 @@ public class Customers {
 	
 	public static void main(String[] args) {
 		//firstOption();
+//		String test = "this is a test";
+//		try {
+//			FileOutputStream fstr = new FileOutputStream("test.txt");
+//			ObjectOutputStream ostr = new ObjectOutputStream(fstr);
+//			ostr.writeObject(test);
+//			ostr.close();
+//			fstr.close();
+//			System.out.println("data saved in test.txt");
+//		}
+//		catch(IOException io) {
+//			io.printStackTrace();
+//		}
 	}
+	
 	
 	public static void firstOption() {
 		Scanner kb = new Scanner(System.in);
@@ -41,7 +57,19 @@ public class Customers {
 			{
 				System.out.println("Type the payment amount as an integer");
 				payment = kb.nextInt();
-				paymentLeft = paymentLeft + payment;
+				//String test = "this is a test";
+				try {
+					FileOutputStream fstr = new FileOutputStream("test.txt");
+					ObjectOutputStream ostr = new ObjectOutputStream(fstr);
+					ostr.writeObject(payment);
+					ostr.close();
+					fstr.close();
+					//System.out.println("data saved in test.txt");
+				}
+				catch(IOException io) {
+					io.printStackTrace();
+				}
+				paymentLeft = paymentLeft - payment;
 				System.out.println("payment left is $" + paymentLeft);
 			}
 		}

@@ -46,6 +46,7 @@ public class Dealership {
 		int selection = 0;
 		//Scanner kb = new Scanner(System.in);
 		
+		
 		do {
 				System.out.println("WELCOME TO THE CAR LOT");
 				System.out.println("select an option.");
