@@ -1,14 +1,19 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class EmployeeLogin {
-	
-//	int price = 0;
+	public static HashMap<String, Integer> carsForSale = new HashMap<String, Integer>();
+	//	int price = 0;
 //	price = Customers.offerPrice;
 //	
 	public static void main(String[] args) {
-		int price;
-		price = Customers.offerPrice;
+		//int price;
+		//price = Customers.offerPrice;
 		//System.out.println(price);
+		insertOriginalCars();
+		showCars();
+		addCars();
+		showCars();
 	}
 	
 	public static void Offers() {
@@ -23,6 +28,54 @@ public class EmployeeLogin {
 		}
 		else if (offerDecision.equals("no")) {
 			System.out.println("The offer has not been accepted");
+		}
+	}
+	
+	public static void insertOriginalCars() {
+		carsForSale.put("2010 Ford Mustang GT", 8500);
+		carsForSale.put("2009 Jaguar XF Supercharged", 8499);
+		carsForSale.put("2011 Ford F-150 SuperCab", 7500);
+//		for(String name : carsForSale.keySet()) {
+//			String key = name.toString();
+//			String value = carsForSale.get(name).toString();
+//			System.out.println(key + ", $" + value);
+//		}
+	}
+	
+	public static void showCars() {
+		for(String name : carsForSale.keySet()) {
+			String key = name.toString();
+			String value = carsForSale.get(name).toString();
+			System.out.println(key + ", $" + value);
+		}
+	}
+	
+	public static void addCars() {
+		Scanner kb = new Scanner(System.in);
+//		carsForSale.put("2010 Ford Mustang GT", 8500);
+//		carsForSale.put("2009 Jaguar XF Supercharged", 8499);
+//		carsForSale.put("2011 Ford F-150 SuperCab", 7500);
+		//System.out.println(carsForSale);
+//		for(String name : carsForSale.keySet()) {
+//			String key = name.toString();
+//			String value = carsForSale.get(name).toString();
+//			System.out.println(key + ", $" + value);
+//		}
+		String decision;
+		String carName;
+		int carPrice;
+		System.out.println("Do you wish to add or remove a car to the lot?");
+		decision = kb.nextLine();
+		if(decision.equals("add")) {
+			//System.out.println("add");
+			System.out.println("Type in the name of the car that you would like to add.");
+			carName = kb.nextLine();
+			System.out.println("Type in the price of the car that you would like to add.");
+			carPrice = kb.nextInt();
+			carsForSale.put(carName, carPrice);
+		}
+		else if(decision.equals("remove")) {
+			System.out.println("remove");
 		}
 	}
 }

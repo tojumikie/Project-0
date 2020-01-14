@@ -26,7 +26,6 @@ public class DealershipTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		assertEquals(0, Customers.offerPrice);
 	}
-
 }

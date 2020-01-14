@@ -1,15 +1,23 @@
+import java.util.HashMap;
 import java.util.Scanner;
+import java.io.Serializable;
 
 public class Customers {
+	//public static HashMap<String, Integer> carsForSale = new HashMap<String, Integer>();
+	//carsForSale.
+	//carsForSale
+	
+	
 	
 	public static int offerPrice = 0;
 	
 	public static void viewCars() {
 		Scanner kb = new Scanner(System.in);
-		System.out.println("CARS AVAILABLE. SELECT A CAR");
-		System.out.println("1. 2010 Ford Mustang GT, $8500 ");
-		System.out.println("2. 2009 Jaguar XF Supercharged, $8499");
-		System.out.println("3. 2011 Ford F-150 SuperCab, $7500");
+		EmployeeLogin.insertOriginalCars();
+//		System.out.println("CARS AVAILABLE. SELECT A CAR");
+//		System.out.println("1. 2010 Ford Mustang GT, $8500 ");
+//		System.out.println("2. 2009 Jaguar XF Supercharged, $8499");
+//		System.out.println("3. 2011 Ford F-150 SuperCab, $7500");
 		int selection = kb.nextInt();
 		viewOffers(selection);
 	}
