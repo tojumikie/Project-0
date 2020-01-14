@@ -71,10 +71,10 @@ public class UserLogin {
 		
 		System.out.println("Type in the username you would like to use");
 		u = kb.nextLine();
-		System.out.println(u);
+		//System.out.println(u);
 		System.out.println("Type in the password you would like to use");
 		p = kb.nextLine();
-		System.out.println(p);
+		//System.out.println(p);
 		user.add(u);
 		pass.add(p);
 	}
@@ -114,7 +114,8 @@ public class UserLogin {
 		System.out.println("Enter the password");
 		p = kb.nextLine();
 		if(user.contains(u) && pass.contains(p)) {
-			System.out.println("Account found. Logging in");
+			System.out.println("Account found. Logging in.");
+			System.out.println("Welcome, " + u);
 		}
 		else {
 			System.out.println("Unable to log in. Username or password "

@@ -14,6 +14,8 @@ public class Customers {
 	public static void viewCars() {
 		Scanner kb = new Scanner(System.in);
 		EmployeeLogin.insertOriginalCars();
+		System.out.println("SELECT A CAR");
+		EmployeeLogin.showCars();
 //		System.out.println("CARS AVAILABLE. SELECT A CAR");
 //		System.out.println("1. 2010 Ford Mustang GT, $8500 ");
 //		System.out.println("2. 2009 Jaguar XF Supercharged, $8499");

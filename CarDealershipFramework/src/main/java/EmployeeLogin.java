@@ -10,10 +10,10 @@ public class EmployeeLogin {
 		//int price;
 		//price = Customers.offerPrice;
 		//System.out.println(price);
-		insertOriginalCars();
-		showCars();
-		addCars();
-		showCars();
+		//insertOriginalCars();
+		//showCars();
+		//addCars();
+		//showCars();
 	}
 	
 	public static void Offers() {
@@ -43,10 +43,12 @@ public class EmployeeLogin {
 	}
 	
 	public static void showCars() {
+		int i = 1;
 		for(String name : carsForSale.keySet()) {
 			String key = name.toString();
 			String value = carsForSale.get(name).toString();
-			System.out.println(key + ", $" + value);
+			System.out.println(i + " " + key + ", $" + value);
+			i++;
 		}
 	}
 	
@@ -75,7 +77,11 @@ public class EmployeeLogin {
 			carsForSale.put(carName, carPrice);
 		}
 		else if(decision.equals("remove")) {
-			System.out.println("remove");
+			//System.out.println("remove");
+			System.out.println("Type in the name of the car that you would like to remove.");
+			carName = kb.nextLine();
+			carsForSale.remove(carName);
+			//showCars();
 		}
 	}
 }

@@ -21,7 +21,7 @@ public class Dealership {
 			SystemAccess SystemAccess = new SystemAccess();
 			break;
 		case 5:
-			System.out.println("exiting program");
+			System.out.println("The program has terminated.");
 			break;
 		}
 //		int selection = 0;
